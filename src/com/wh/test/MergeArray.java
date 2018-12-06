@@ -1,9 +1,9 @@
 package com.wh.test;
 
-public class MyArrays2 {
+public class MergeArray {
 	// 合并两个有序数组,两种实现方式
 	static int m, n, index = 0;
-	static int[] b = { 1, 32, 37, 455 };
+	static int[] b = { 1, 32, 37, 45 };
 	static int[] a = { 8, 18, 34, 56 };
 	static int k = a.length + b.length;
 	static int[] c = new int[k];
