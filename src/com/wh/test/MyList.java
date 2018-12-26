@@ -28,13 +28,13 @@ public class MyList {
 	}
 
 	public static void array() {
-		for (int i = 0; i < 100000; i++) {
+		for (int i = 0; i < 50000; i++) {
 			mArrayList.add(0, i);
 		}
 	}
 
 	public static void linked() {
-		for (int i = 0; i < 100000; i++) {
+		for (int i = 0; i < 50000; i++) {
 			mLinkedList.add(0, i);
 		}
 	}

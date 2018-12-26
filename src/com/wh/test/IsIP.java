@@ -5,8 +5,8 @@ import java.util.regex.Pattern;
 
 public class IsIP {
 	public static void main(String[] args) {
-		isIp();
 		getStringNum();
+		isIp();
 	}
 
 	// 从String提取数字，还可以用charAt方法挨着提取
@@ -20,9 +20,6 @@ public class IsIP {
 
 	// 判断是否是一个IP
 	public static void isIp() {
-		String qq = "834489";
-		System.out.println("qq:" + qq.matches("^[1-9]\\d{4,10}"));
-
 		String ip = "11.110.133.244";
 		if (ip.trim().matches("\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}")) {
 			String[] s = ip.split("\\.");
