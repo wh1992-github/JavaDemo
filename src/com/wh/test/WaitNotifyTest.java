@@ -29,13 +29,12 @@ public class WaitNotifyTest {
 				long startTime = System.currentTimeMillis();
 				try {
 					lockObj.wait();
-					sleep(300);
+					sleep(100);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 				long endTime = System.currentTimeMillis();
-				System.out.println("线程" + this.getName() + "等待时间为："
-						+ (endTime - startTime));
+				System.out.println("线程" + this.getName() + "等待时间为：" + (endTime - startTime));
 			}
 		}
 	}
@@ -48,7 +47,7 @@ public class WaitNotifyTest {
 		public void run() {
 			try {
 				// 给等待线程等待时间
-				sleep(800);
+				sleep(300);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

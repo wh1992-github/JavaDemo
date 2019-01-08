@@ -14,14 +14,14 @@ public class TicketThread {
 
 class Tickets implements Runnable {
 	// 为了让线程共享一个资源所以我们定义一个静态成员变量
-	private static int tickets = 1000;
+	private static int tickets = 100;
 
 	public void run() {
 		while (true) {
-			synchronized (Tickets.class) {
+			synchronized (Tickets.this) {
 				try {
 					if (tickets > 0) {
-						Thread.sleep(1000);
+						Thread.sleep(10);
 						System.out.println(Thread.currentThread().getName() + "正在售出第" + (tickets--) + "张票");
 					}
 				} catch (Exception e) {

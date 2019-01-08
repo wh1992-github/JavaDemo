@@ -1,6 +1,6 @@
 package com.wh.test;
 
-//死锁
+// 死锁
 public class DeadLock {
 	public static String obj1 = "obj1";
 	public static String obj2 = "obj2";

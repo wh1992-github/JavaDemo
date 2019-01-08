@@ -45,14 +45,13 @@ public class IOClass {
 		fileInputStream.read(b);
 		System.out.println(new String(b));
 
-		// StringBuilder sBuilder = new StringBuilder();
-		// BufferedReader bufferedReader=new BufferedReader(new
-		// InputStreamReader(fileInputStream));
-		// String string = null;
-		// while ((string = bufferedReader.readLine()) != null) {
-		// sBuilder.append(string);
-		// }
-		// System.out.println(sBuilder.toString());
+//		StringBuilder sBuilder = new StringBuilder();
+//		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(fileInputStream));
+//		String string = null;
+//		while ((string = bufferedReader.readLine()) != null) {
+//			sBuilder.append(string);
+//		}
+//		System.out.println(sBuilder.toString());
 	}
 
 	public static void writeCharToFile() throws IOException {
