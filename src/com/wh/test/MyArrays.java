@@ -5,7 +5,7 @@ public class MyArrays {
 	public static void main(String[] args) {
 		int[] a = { 44, 16, 8, 18, 34, 56, 26 };
 		// bubbleSort(a);
-		// selectSort(a);
+		 selectSort(a);
 		// insertSort(a);
 		for (String i : args) {
 			System.out.println(i);
@@ -50,7 +50,7 @@ public class MyArrays {
 
 	// 选择排序
 	public static void selectSort(int[] a) {
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < a.length-1; i++) {
 			int temp = a[i];// 储存最小的值
 			int position = i;
 			for (int j = i + 1; j < a.length; j++) {

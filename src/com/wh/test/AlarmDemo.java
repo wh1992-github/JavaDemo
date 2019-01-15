@@ -22,7 +22,6 @@ public class AlarmDemo {
 		}
 	}
 
-	//
 	private static void formatTime(long time) {
 		long second = time % 60;
 		long minute = time / 60 % 60;
