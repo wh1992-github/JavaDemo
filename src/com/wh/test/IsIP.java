@@ -20,7 +20,7 @@ public class IsIP {
 
 	// 判断是否是一个IP
 	public static void isIp() {
-		String ip = "11.110.133.244";
+		String ip = "11.110.133.25";
 		if (ip.trim().matches("\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}")) {
 			String[] s = ip.split("\\.");
 			if (Integer.parseInt(s[0]) < 255) {

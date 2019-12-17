@@ -1,26 +1,24 @@
 package com.wh.test;
 
 public class WaitNotifyTest {
-
 	// 在多线程间共享的对象上使用wait
-	private String lockObj = "locked";
+	private static final String lockObj = "locked";
 
 	public static void main(String[] args) {
-		WaitNotifyTest test = new WaitNotifyTest();
-		ThreadWait threadWait1 = test.new ThreadWait("wait thread111");
-		ThreadWait threadWait2 = test.new ThreadWait("wait thread222");
-		ThreadWait threadWait3 = test.new ThreadWait("wait thread333");
+		ThreadWait threadWait1 = new ThreadWait("wait thread111");
+		ThreadWait threadWait2 = new ThreadWait("wait thread222");
+		ThreadWait threadWait3 = new ThreadWait("wait thread333");
 		threadWait1.start();
 		threadWait2.start();
-		threadWait3.start();
 
-		ThreadNotify threadNotify = test.new ThreadNotify("notify thread");
+		ThreadNotify threadNotify = new ThreadNotify("notify thread");
 		threadNotify.start();
+		threadWait3.start();
 	}
 
-	class ThreadWait extends Thread {
+	static class ThreadWait extends Thread {
 		public ThreadWait(String name) {
-			super(name);
+			setName(name);
 		}
 
 		public void run() {
@@ -29,7 +27,7 @@ public class WaitNotifyTest {
 				long startTime = System.currentTimeMillis();
 				try {
 					lockObj.wait();
-					sleep(100);
+					sleep(500);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -39,9 +37,9 @@ public class WaitNotifyTest {
 		}
 	}
 
-	class ThreadNotify extends Thread {
+	static class ThreadNotify extends Thread {
 		public ThreadNotify(String name) {
-			super(name);
+			setName(name);
 		}
 
 		public void run() {

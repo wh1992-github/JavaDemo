@@ -11,11 +11,11 @@ public class MyList {
 
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
-		array();
+		addArray();
 		System.out.println(System.currentTimeMillis() - start);
 
 		start = System.currentTimeMillis();
-		linked();
+		AddLinked();
 		System.out.println(System.currentTimeMillis() - start);
 
 		start = System.currentTimeMillis();
@@ -27,13 +27,13 @@ public class MyList {
 		System.out.println(System.currentTimeMillis() - start);
 	}
 
-	public static void array() {
+	public static void addArray() {
 		for (int i = 0; i < 50000; i++) {
 			mArrayList.add(0, i);
 		}
 	}
 
-	public static void linked() {
+	public static void AddLinked() {
 		for (int i = 0; i < 50000; i++) {
 			mLinkedList.add(0, i);
 		}

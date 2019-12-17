@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 //正则匹配
-public class Test {
+public class StringMatcher {
 
 	public static void main(String[] args) {
 		// System.out.println(isNumeric("12456789"));

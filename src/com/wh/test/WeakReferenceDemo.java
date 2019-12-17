@@ -2,7 +2,7 @@ package com.wh.test;
 
 import java.lang.ref.WeakReference;
 
-public class TestWeakReference {
+public class WeakReferenceDemo {
 
 	// 值得注意的一点 , 即使有 car 引用指向对象, 且 car 是一个strong reference, weak reference
 	// weakCar指向的对象仍然被回收了.
@@ -26,14 +26,12 @@ public class TestWeakReference {
 		int i = 0;
 		while (true) {
 			if (weakCar.get() != null) {
-				// 如果有下面这行代码：weak reference指向的object就不会被回收了. 因为还有一个strong
-				// reference car 指向它.
+				// 如果有下面这行代码：weak reference指向的object就不会被回收了. 因为还有一个strong reference car 指向它.
 				// System.out.println(car);
 				if (i > 2000) {
 					System.gc();
 				}
-				System.out.println("Object is alive " + i + " loops -- "
-						+ weakCar.get());
+				System.out.println("Object is alive " + i + " loops -- " + weakCar.get());
 				i++;
 			} else {
 				System.out.println("被回收了");
@@ -49,26 +47,6 @@ public class TestWeakReference {
 		public Car(double price, String color) {
 			this.price = price;
 			this.color = color;
-		}
-
-		public double getPrice() {
-			return price;
-		}
-
-		public void setPrice(double price) {
-			this.price = price;
-		}
-
-		public String getcolor() {
-			return color;
-		}
-
-		public void setcolor(String color) {
-			this.color = color;
-		}
-
-		public String toString() {
-			return color + "car costs $" + price;
 		}
 	}
 }
